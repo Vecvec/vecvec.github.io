@@ -189,8 +189,8 @@ materials (I need to delay reconnection), hence why I believe that Markov chains
   blurred. Additionally, biased ReSTIR is typically less noisy so this is probably best case lack of noise.
   I think that the Markov chains are probably as good, possibly better than this.
 </details>
-<p>
-<p>
+<p></p>
+
 Notably, I have not gotten as good results from just the world space Markov chains (I've checked and it isn't
 my confidence system, it seems to just be a high amount of GI). For small lights and a lot of light coming in
 from everywhere they tend to improve noise less then the screen space chains only as can be seen below
