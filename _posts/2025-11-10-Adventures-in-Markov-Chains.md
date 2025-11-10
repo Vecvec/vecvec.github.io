@@ -151,7 +151,7 @@ All these images were taken at 8 spp.
 
 Here is the base image (taken on the second frame, but there isn't anything that changes in later frames)
 
-{% include_relative image.html file="Frame_1_no_mcmc.png" %}
+![image](./assets/Frame_1_no_mcmc.png)
 
 Its fairly difficult to tell that the left wall is green. The right wall is pure red (1.0, 0.0, 0.0), so
 it always appears red.
@@ -195,27 +195,27 @@ Notably, I have not gotten as good results from just the world space Markov chai
 my confidence system, it seems to just be a high amount of GI). For small lights and a lot of light coming in
 from everywhere they tend to improve noise less then the screen space chains only as can be seen below
 
-![image](/_posts./Frame_0_mcmc_world.png) < first frame (just world space Markov chains)
+![image](.assets/Frame_0_mcmc_world.png) < first frame (just world space Markov chains)
 
-![image](/_posts./Frame_1_mcmc_world.png) < second frame (just world space Markov chains)
+![image](.assets/Frame_1_mcmc_world.png) < second frame (just world space Markov chains)
 
-![image](/_posts./Frame_57_mcmc_world.png) < 58th frame (just world space Markov chains)
+![image](.assets/Frame_57_mcmc_world.png) < 58th frame (just world space Markov chains)
 
 The issue with the screen space Markov chains is that they tend to generate annoying fireflies (likely due to
 having a very small pdf on the indirect light which is still quite bright) that are very noticable on high spps.
 They also tend to be slower to train, as not many samples hit the light on the first bounce and after that
 training is slowed. The world space Markov chains improve both of these as well as the light reflecting on the box.
 
-![image](/_posts./Frame_1_mcmc_screen.png) < second frame (just screen space Markov chains)
+![image](.assets/Frame_1_mcmc_screen.png) < second frame (just screen space Markov chains)
 
-![image](/_posts./Frame_42_mcmc_screen.png) < 43rd frame (just screen space Markov chains) (Note that the light reflecting of the box is hard to see)
+![image](.assets/Frame_42_mcmc_screen.png) < 43rd frame (just screen space Markov chains) (Note that the light reflecting of the box is hard to see)
 
-![image](/_posts/assets./png) < 43rd frame everything divided by 5 to show fireflies.
+![image](.assets/assets./png) < 43rd frame everything divided by 5 to show fireflies.
 
 On the 43rd frame, renderdoc says that the brightest pixel was at 133.58257 (this is probably the light source), and
 this is what the image looks like when that is set as the white point.
 
-![image](/_posts/assets./png) < 43rd frame, everything divided by ~133 to show fireflies.
+![image](.assets/assets./png) < 43rd frame, everything divided by ~133 to show fireflies.
 
 As you can see there are some very bright fireflies!
 
