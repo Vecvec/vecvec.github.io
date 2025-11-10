@@ -1,4 +1,4 @@
-Adventures in Markov Chains.
+
 ----
 #### Writing began 07/11/2025
 #### Finalized 10/11/2025
