@@ -151,7 +151,7 @@ All these images were taken at 8 spp.
 
 Here is the base image (taken on the second frame, but there isn't anything that changes in later frames)
 
-<img src="Frame_1_no_mcmc.png">
+{% include_relative image.html file="Frame_1_no_mcmc.png" %}
 
 Its fairly difficult to tell that the left wall is green. The right wall is pure red (1.0, 0.0, 0.0), so
 it always appears red.
@@ -161,17 +161,17 @@ light.
 
 Here is the same image (on the second frame still) but with the Markov chains
 
-<img src="Frame_1_mcmc.png">
+{% include_relative image.html file=""Frame_1_mcmc.png"" %}
 
 If anyone is curious, on the first frame, only a very small improvement can be seen (but noticable none the less).
 
-<img src="Frame_0_mcmc.png">
+{% include_relative image.html file=""Frame_0_mcmc.png"" %}
 
 You can hopefully see the scene layout now, and maybe even light reflecting onto the ceiling off the tall box.
 
 Once everything has had a time to train (27 frames), this is the result.
 
-<img src="Frame_27_mcmc.png">
+{% include_relative image.html file=""Frame_27_mcmc.png"" %}
 
 I think it gets fairly close to this by the third frame, and by 10 frames I can't see any
 further improvement.
@@ -183,7 +183,7 @@ materials (I need to delay reconnection), hence why I believe that Markov chains
 
 <details>
   <summary>Possibly incorrect ReSTIR w/o Markov chains, second frame</summary>
-  <img src="Frame_1_restir.png">
+  {% include_relative image.html file=""Frame_1_restir.png"" %}
 
   (analysis assumes ReSTIR is correct) This is the biased one, so the light reflecting off the tall block is
   blurred. Additionally, biased ReSTIR is typically less noisy so this is probably best case lack of noise.
@@ -195,27 +195,27 @@ Notably, I have not gotten as good results from just the world space Markov chai
 my confidence system, it seems to just be a high amount of GI). For small lights and a lot of light coming in
 from everywhere they tend to improve noise less then the screen space chains only as can be seen below
 
-<img src="Frame_0_mcmc_world.png"> < first frame (just world space Markov chains)
+{% include_relative image.html file=""Frame_0_mcmc_world.png"" %} < first frame (just world space Markov chains)
 
-<img src="Frame_1_mcmc_world.png"> < second frame (just world space Markov chains)
+{% include_relative image.html file=""Frame_1_mcmc_world.png"" %} < second frame (just world space Markov chains)
 
-<img src="Frame_57_mcmc_world.png"> < 58th frame (just world space Markov chains)
+{% include_relative image.html file=""Frame_57_mcmc_world.png"" %} < 58th frame (just world space Markov chains)
 
 The issue with the screen space Markov chains is that they tend to generate annoying fireflies (likely due to
 having a very small pdf on the indirect light which is still quite bright) that are very noticable on high spps.
 They also tend to be slower to train, as not many samples hit the light on the first bounce and after that
 training is slowed. The world space Markov chains improve both of these as well as the light reflecting on the box.
 
-<img src="Frame_1_mcmc_screen.png"> < second frame (just screen space Markov chains)
+{% include_relative image.html file=""Frame_1_mcmc_screen.png"" %} < second frame (just screen space Markov chains)
 
-<img src="Frame_42_mcmc_screen.png"> < 43rd frame (just screen space Markov chains) (Note that the light reflecting of the box is hard to see)
+{% include_relative image.html file=""Frame_42_mcmc_screen.png"" %} < 43rd frame (just screen space Markov chains) (Note that the light reflecting of the box is hard to see)
 
-<img src="Frame_42_mcmc_screen_div_5.png"> < 43rd frame everything divided by 5 to show fireflies.
+{% include_relative image.html file=""Frame_42_mcmc_screen_div_5.png"" %} < 43rd frame everything divided by 5 to show fireflies.
 
 On the 43rd frame, renderdoc says that the brightest pixel was at 133.58257 (this is probably the light source), and
 this is what the image looks like when that is set as the white point.
 
-<img src="Frame_42_mcmc_screen_norm.png"> < 43rd frame, everything divided by ~133 to show fireflies.
+{% include_relative image.html file=""Frame_42_mcmc_screen_norm.png"" %} < 43rd frame, everything divided by ~133 to show fireflies.
 
 As you can see there are some very bright fireflies!
 
