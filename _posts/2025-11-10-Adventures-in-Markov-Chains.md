@@ -151,7 +151,7 @@ All these images were taken at 8 spp.
 
 Here is the base image (taken on the second frame, but there isn't anything that changes in later frames)
 
-![image](./assets/Frame_1_no_mcmc.png)
+![image](./assets/images/Frame_1_no_mcmc.png)
 
 Its fairly difficult to tell that the left wall is green. The right wall is pure red (1.0, 0.0, 0.0), so
 it always appears red.
@@ -161,11 +161,11 @@ light.
 
 Here is the same image (on the second frame still) but with the Markov chains
 
-![image](./assets/Frame_1_mcmc.png)
+![image](./assets/images/Frame_1_mcmc.png)
 
 If anyone is curious, on the first frame, only a very small improvement can be seen (but noticable none the less).
 
-![image](./assets/Frame_0_mcmc.png)
+![image](./assets/images/Frame_0_mcmc.png)
 
 You can hopefully see the scene layout now, and maybe even light reflecting onto the ceiling off the tall box.
 
